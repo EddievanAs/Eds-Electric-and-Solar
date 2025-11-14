@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="af">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ED's Electric and Solar — Solar & Elektriese Dienste</title>
+  <meta name="description" content="ED's Electric and Solar — Solar instalasies, elektriese installasies & repairs, gate motors. Stilbaai, Wes-Kaap."/>
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --text:#ffffff;
+      --muted:#cfcfcf;
+      --gold:#d4af37; /* goud */
+      --accent:#b08a1f;
+      --maxw:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, #060606 0%, #0f0f0f 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .wrap{max-width:var(--maxw); margin:32px auto; padding:24px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; margin-bottom:28px;
+    }
+    .brand{display:flex; align-items:center; gap:14px; text-decoration:none; color:inherit;}
+    .logo{
+      width:64px; height:64px; border-radius:12px;
+      background:linear-gradient(135deg,var(--gold), var(--accent));
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 6px 18px rgba(0,0,0,.6); flex-shrink:0;
+      font-weight:700; color:#0b0b0b;
+    }
+    nav a{color:var(--muted); text-decoration:none; margin-left:18px; font-weight:600;}
+    nav a:hover{color:var(--gold);}
+    .hero{
+      display:grid; grid-template-columns:1fr; gap:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      padding:28px; border-radius:var(--radius);
+    }
+    .hero-grid{display:flex; gap:28px; align-items:center; flex-wrap:wrap;}
+    .hero-text h1{
+      margin:0 0 8px 0; font-size:28px; letter-spacing:-0.5px;
+    }
+    .lead{color:var(--muted); margin-bottom:14px;}
+    .cta{display:inline-block; background:var(--gold); color:#0b0b0b; padding:10px 16px; border-radius:10px; font-weight:700; text-decoration:none;}
+    .secondary{background:transparent; border:1px solid rgba(255,255,255,.06); padding:8px 14px; border-radius:10px; color:var(--muted); text-decoration:none; margin-left:8px;}
+    .cols{display:grid; grid-template-columns:1fr 340px; gap:22px; margin-top:20px;}
+    .card{background:rgba(255,255,255,.02); padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.5);}
+    .services{display:grid; gap:12px;}
+    .service{display:flex; gap:12px; align-items:flex-start;}
+    .icon{
+      width:48px; height:48px; background:linear-gradient(135deg,var(--gold), var(--accent));
+      border-radius:10px; display:flex; align-items:center; justify-content:center; color:#0b0b0b; font-weight:800;
+      flex-shrink:0;
+    }
+    h2{margin:0 0 12px 0;}
+    .muted{color:var(--muted); font-size:15px;}
+    .list{padding-left:18px; margin:8px 0;}
+    .contact-line{display:flex; gap:10px; align-items:center; margin-bottom:8px;}
+    .small{font-size:13px; color:var(--muted);}
+    footer{margin-top:28px; color:var(--muted); font-size:13px; text-align:center;}
+    /* responsive */
+    @media (max-width:880px){
+      .cols{grid-template-columns:1fr;}
+      nav{display:none;}
+      header{flex-direction:column; align-items:flex-start;}
+    }
+
+    /* simple in-page nav highlight */
+    .nav-fixed{
+      position:sticky; top:18px; z-index:40;
+      background:linear-gradient(180deg, rgba(11,11,11,.6), rgba(11,11,11,.3));
+      padding:12px; border-radius:12px;
+    }
+
+    /* contact form (client-side only) */
+    form input, form textarea{
+      width:100%; padding:10px; margin-top:8px; border-radius:8px; border:1px solid rgba(255,255,255,.06);
+      background:transparent; color:var(--text);
+    }
+    form button{margin-top:10px; padding:10px 12px; border-radius:8px; border:0; background:var(--gold); color:#0b0b0b; font-weight:700;}
+    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(212,175,55,.12); color:var(--gold); font-weight:700; font-size:13px;}
+    .highlight{color:var(--gold); font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#home" aria-label="ED's Electric and Solar">
+        <div class="logo">ED</div>
+        <div>
+          <div style="font-weight:800; font-size:16px;">ED's Electric and Solar</div>
+          <div class="small muted">Solar • Elektriese installasies • Repairs</div>
+        </div>
+      </a>
+
+      <nav class="nav-fixed" aria-label="Hoof navigasie">
+        <a href="#home">Home</a>
+        <a href="#dienste">Dienste</a>
+        <a href="#oor">Oor Ons</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero card" aria-labelledby="home-title">
+      <div class="hero-grid">
+        <div class="hero-text" style="flex:1;">
+          <h1 id="home-title">ED's Electric and Solar</h1>
+          <div class="lead">Betroubare solar-installasies en elektriese oplossings in Stilbaai, Wes-Kaap. Ons spesialiseer in Deye, Dyness en Luxpower sisteeme — professionele installasie, bedrading, herstelwerk en onderhoud.</div>
+          <a class="cta" href="#kontak">Kontak Ons</a>
+          <a class="secondary" href="#dienste">Kyk Dienste</a>
+
+          <div style="margin-top:14px;">
+            <div class="contact-line">
+              <strong>Besigheids eienaar:</strong>
+              <div class="muted">Eddie van As</div>
+            </div>
+            <div class="contact-line">
+              <strong>Selfoon:</strong>
+              <a href="tel:+27616002715" style="color:var(--gold); text-decoration:none; font-weight:700;">+27 61 600 2715</a>
+              <span class="small muted" style="margin-left:auto;"><a href="https://wa.me/27616002715" target="_blank" style="color:var(--muted); text-decoration:none;">WhatsApp</a></span>
+            </div>
+            <div class="contact-line">
+              <strong>E-pos:</strong>
+              <a href="mailto:eds.electrics@gmail.com" style="color:var(--muted); text-decoration:none;">eds.electrics@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <strong>Finansies:</strong>
+              <a href="mailto:finansies.edselecsolar@gmail.com" style="color:var(--muted); text-decoration:none;">finansies.edselecsolar@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <strong>Adres:</strong>
+              <div class="muted">Stilbaai, Western Cape</div>
+            </div>
+            <div style="margin-top:10px;">
+              <a href="https://www.facebook.com/EDsElectricAndSolar" target="_blank" style="text-decoration:none;">
+                <span class="badge">Facebook: ED's Electric & Solar</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUICK CONTACT CARD -->
+        <aside style="width:320px;">
+          <div class="card">
+            <h3 style="margin-top:0;">Vinnig kontak</h3>
+            <div class="muted">Bel of stuur 'n WhatsApp vir 'n vinnige kwotasie of raad.</div>
+            <div style="margin-top:12px;">
+              <a class="cta" href="tel:+27616002715">Skakel Nou</a>
+              <a class="secondary" href="mailto:eds.electrics@gmail.com">E-pos</a>
+            </div>
+            <hr style="border:none; height:1px; background:rgba(255,255,255,.03); margin:14px 0;">
+            <div>
+              <strong>Ons sien uit daarna om te help</strong>
+              <p class="small muted" style="margin:8px 0 0 0;">Ons werk met top handelsmerke soos <span class="highlight">Deye, Dyness, Luxpower</span> en meer — van paneelinstallasies tot volledige elektriese bedrading en gate motor installasies.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="dienste" class="cols" aria-labelledby="dienste-title" style="margin-top:22px;">
+      <div>
+        <h2 id="dienste-title">Dienste</h2>
+        <div class="muted" style="margin-bottom:12px;">Ons bied 'n volledige spektrum van solar- en elektriese dienste — professioneel en met veiligheid as prioriteit.</div>
+
+        <div class="services card">
+          <div class="service">
+            <div class="icon">☀️</div>
+            <div>
+              <strong>Solar-panele & sisteeminstallasie</strong>
+              <div class="small muted">Ontwerp en installeer Deye, Dyness en Luxpower-gebaseerde skakels. Volledige projekbestuur, vanaf konsultasie tot kommissie.</div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">⚡</div>
+            <div>
+              <strong>Elektriese installasies & bedrading</strong>
+              <div class="small muted">Huise en kommersiële geboue — nuwe bedrading, punte, verligting en veiligheidsopgraderings. Naleving van standaarde en sekerheid.</div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">🔧</div>
+            <div>
+              <strong>Repairs & Onderhoud</strong>
+              <div class="small muted">Diagnose en herstel van elektriese probleme, inverter- en battery-onderhoud, paneel- en konneksie-ondersoeke.</div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">🚪</div>
+            <div>
+              <strong>Centurion gate motor installasie</strong>
+              <div class="small muted">Professionele installasie en diens van Centurion gate motors—nuut of vervanging.</div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">💡</div>
+            <div>
+              <strong>Energiemanagement & advies</strong>
+              <div class="small muted">Suster-advies oor die beste komponente vir langdurige waarde en kostebesparing.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK SPECS -->
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0;">Waarom kies ons?</h3>
+          <ul class="muted list">
+            <li>Ervaring met Deye, Dyness, Luxpower en ander top handelsmerke.</li>
+            <li>Veiligheid en kwaliteit—ons werk volgens bedryfstandaarde.</li>
+            <li>Alle installasies kom met professionele toetsing en dokumentasie.</li>
+            <li>Vinnige reaksie op herstelwerk en onderhoud.</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <strong>Voorbeeld projekstappe:</strong>
+            <ol class="small muted list">
+              <li>Konsultasie & terreinassessering</li>
+              <li>Ontwerp & kwotasie</li>
+              <li>Installasie & toetsing</li>
+              <li>Oplewering en onderhoudsooreenkoms</li>
+            </ol>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="oor" style="margin-top:20px;">
+      <div class="card">
+        <h2>Oor ED's Electric and Solar</h2>
+        <p class="muted">Onder leiding van <strong>Eddie van As</strong> bied ED's Electric and Solar betroubare, deursigtige en professionele dienste in Stilbaai en omgewing. Ons fokus op kwaliteit workmanship en langtermyn waarde — ons wil hê dat jou stelsel veilig werk en geld bespaar oor die jare.</p>
+
+        <h3 style="margin-top:12px;">Ons belofte</h3>
+        <p class="muted">Of dit 'n klein herstelwerk is of 'n volledige solar-installasie, ons gee aandag aan die besonderhede, gebruik top-komponente en verseker dat alles korrek en veilig geïnstalleer is. Jou tevredenheid en veiligheid is ons prioriteit.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="kontak" style="margin-top:20px;">
+      <div class="card">
+        <h2>Kontak</h2>
+        <p class="muted">Skakel of stuur 'n e-pos vir 'n gratis konsultasie en kwotasie.</p>
+
+        <div style="display:grid; grid-template-columns:1fr 360px; gap:18px; align-items:start;">
+          <div>
+            <!-- Simple form: client-side only; suggests using mailto links for real email -->
+            <form onsubmit="handleForm(event)">
+              <label class="small">Naam</label>
+              <input id="fn" type="text" placeholder="Jou naam" required>
+
+              <label class="small">E-pos</label>
+              <input id="fe" type="email" placeholder="naam@voorbeeld.com" required>
+
+              <label class="small">Boodskap</label>
+              <textarea id="fm" rows="5" placeholder="Kort beskrywing van projek of navraag" required></textarea>
+
+              <button type="submit">Stuur navraag</button>
+            </form>
+
+            <p class="small muted" style="margin-top:10px;">
+              As jy direk wil e-pos: <a href="mailto:eds.electrics@gmail.com" style="color:var(--muted); text-decoration:none;">eds.electrics@gmail.com</a> (of finansies.edselecsolar@gmail.com vir finansiële sake).
+            </p>
+          </div>
+
+          <aside class="card">
+            <h3 style="margin-top:0;">Ander maniere om te kontak</h3>
+            <div class="contact-line">
+              <div><strong>Selfoon / WhatsApp</strong></div>
+              <div style="margin-left:auto;"><a href="tel:+27616002715" style="color:var(--gold); text-decoration:none;">+27 61 600 2715</a></div>
+            </div>
+
+            <div class="contact-line" style="margin-top:8px;">
+              <div><strong>Facebook</strong></div>
+              <div style="margin-left:auto;"><a href="https://www.facebook.com/EDsElectricAndSolar" target="_blank" style="color:var(--muted); text-decoration:none;">ED's Electric & Solar</a></div>
+            </div>
+
+            <div style="margin-top:12px;">
+              <strong class="small">Adres</strong>
+              <div class="muted small">Stilbaai, Western Cape</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> ED's Electric and Solar — Alle regte voorbehou. <span style="display:block; margin-top:6px;" class="small muted">Eienaar: Eddie van As • Tel: +27 61 600 2715 • E-pos: eds.electrics@gmail.com</span>
+    </footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple form handler: opens default mail client with the message (mailto)
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('fn').value.trim();
+      const email = document.getElementById('fe').value.trim();
+      const msg = document.getElementById('fm').value.trim();
+      const subject = encodeURIComponent('Navraag vanaf webwerf: ' + name);
+      const body = encodeURIComponent('Naam: ' + name + '\\nE-pos: ' + email + '\\n\\nBoodskap:\\n' + msg);
+      // opens user's mail client (note: not a server-side send)
+      window.location.href = 'mailto:eds.electrics@gmail.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
